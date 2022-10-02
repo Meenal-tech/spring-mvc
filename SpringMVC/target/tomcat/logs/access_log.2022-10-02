@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [02/Oct/2022:07:36:55 +0530] "GET /spring-mvc/login HTTP/1.1" 404 949 http-bio-8080-exec-1 22
+0:0:0:0:0:0:0:1 - - [02/Oct/2022:07:36:55 +0530] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-3 1

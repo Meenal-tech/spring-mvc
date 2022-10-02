@@ -1,0 +1,40 @@
+<!-- webapp/WEB-INF/web.xml -->
+<web-app 
+	xmlns="http://Java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>To do List</display-name>
+
+ 	<welcome-file-list>
+ 	
+	<!-- welcome file is just a simple redirection file
+	i.e, whenever the user types - localhost: 8080
+	then the browser will redirect the user to welcome file, which is "login.do".
+	 -->
+	 
+		<welcome-file>login.do</welcome-file>
+		</welcome-file-list> 
+	
+	 <servlet>
+	        <servlet-name>dispatcher</servlet-name>
+	        <servlet-class>
+	            org.springframework.web.servlet.DispatcherServlet
+	        </servlet-class>
+	        <init-param>
+	            <param-name>contextConfigLocation</param-name>
+	            <param-value>/WEB-INF/views/todo-servlet.xml</param-value>
+	            <!-- name of the xml where we have defined the bean -->
+	        </init-param>
+	        <load-on-startup>1</load-on-startup>
+	    </servlet>
+	
+	    <servlet-mapping>
+	        <servlet-name>dispatcher</servlet-name>
+	        <url-pattern>/</url-pattern>
+	        <!-- the "/spring-mvc/" is the url, i.e, whenever the user types - 
+	        	localhost:8080/spring-mvc/, then 
+	         -->
+	    </servlet-mapping>
+
+</web-app>
